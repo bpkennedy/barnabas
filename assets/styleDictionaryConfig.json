@@ -1,0 +1,15 @@
+{
+  "source": ["./assets/barnabas-design-system.json"],
+  "platforms": {
+    "web": {
+      "transformGroup": "web",
+        "buildPath": "assets/styles/",
+        "prefix": "bnb",
+        "files": [{
+        "destination": "_variables.scss",
+        "format": "css/variables",
+        "selector": ":root"
+      }]
+    }
+  }
+}
