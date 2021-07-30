@@ -48,7 +48,10 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    'nuxt-purgecss',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap' // !!! sitemap must always be at the end !!!
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -59,6 +62,20 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    publicPath: '/nuxt/'
+  },
+
+  purgeCSS: {
+    keyframes: true,
+    variables: true,
+    fontFace: true
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '/'
+  },
+
+  sitemap: {
+    hostname: 'https://stbarnabas-stl.org'
   }
 }
