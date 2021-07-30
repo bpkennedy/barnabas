@@ -6,10 +6,78 @@
         "buildPath": "assets/styles/",
         "prefix": "bnb",
         "files": [{
-        "destination": "_variables.scss",
-        "format": "css/variables",
-        "selector": ":root"
-      }]
+            "destination": "generated/_color.scss",
+            "format": "css/variables",
+            "selector": ":root",
+            "filter": {
+              "attributes": {
+                "category": "color"
+              }
+            }
+          }, {
+            "destination": "generated/_font.scss",
+            "format": "css/variables",
+            "selector": ":root",
+            "filter": {
+              "attributes": {
+                "category": "font"
+              }
+            }
+          }, {
+            "destination": "generated/_effect.scss",
+            "format": "css/variables",
+            "selector": ":root",
+            "filter": {
+              "attributes": {
+                "category": "effect"
+              }
+            }
+        }, {
+          "destination": "generated/_breakpoint.scss",
+          "format": "css/variables",
+          "selector": ":root",
+          "filter": {
+            "attributes": {
+              "category": "breakpoint"
+            }
+          }
+        }, {
+          "destination": "generated/_spacing.scss",
+          "format": "css/variables",
+          "selector": ":root",
+          "filter": {
+            "attributes": {
+              "category": "spacing"
+            }
+          }
+        }, {
+          "destination": "generated/_sizing.scss",
+          "format": "css/variables",
+          "selector": ":root",
+          "filter": {
+            "attributes": {
+              "category": "sizing"
+            }
+          }
+        }, {
+          "destination": "generated/_radius.scss",
+          "format": "css/variables",
+          "selector": ":root",
+          "filter": {
+            "attributes": {
+              "category": "radius"
+            }
+          }
+        }, {
+          "destination": "generated/_zindex.scss",
+          "format": "css/variables",
+          "selector": ":root",
+          "filter": {
+            "attributes": {
+              "category": "zIndex"
+            }
+          }
+        }]
     }
   }
 }

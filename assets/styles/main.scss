@@ -1,5 +1,11 @@
-@import 'variables.scss';
+@import 'generated/color';
+@import 'generated/font';
+@import 'generated/breakpoint';
+@import 'generated/effect';
+@import 'generated/radius';
+@import 'generated/sizing';
+@import 'generated/spacing';
+@import 'generated/zindex';
 
-body {
-  color: red;
-}
+// The generated style-dictionary files are configured to create css variables on :root which
+// will make web component styles' scoped via shadowDOM accessible.
