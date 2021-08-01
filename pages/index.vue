@@ -9,7 +9,7 @@
       justify-content="center"
     >
       <CHeading text-align="center" mb="4">
-        ⚡️ Hello chakra-ui/vue
+        ⚡️ <Txt :value="title" as="h1" font-size="4xl" />
       </CHeading>
       <CFlex justify="center" direction="column" align="center">
         <CBox mb="3">
@@ -124,11 +124,13 @@ export default {
     CModalCloseButton,
     CIconButton,
     CFlex,
-    CHeading
+    CHeading,
+    Txt: () => import('../components/x-atoms/Txt.vue')
   },
   inject: ['$chakraColorMode', '$toggleColorMode'],
   data () {
     return {
+      title: 'St. Barnabas\' Episcopal Church',
       showModal: false,
       mainStyles: {
         dark: {
@@ -140,6 +142,18 @@ export default {
           color: 'gray.900'
         }
       }
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'St. Barnabas\' Episcopal Church, Florissant, Missouri - Home Page. St. Barnabas\' Episcopal Church is a welcoming, energized, loving, multi-cultural parish serving North St. Louis County and many surrounding areas. Worship style is traditional but the congregation is informal. Come join us in worshipping our Lord and Savior.'
+        }
+      ]
     }
   },
   computed: {

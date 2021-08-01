@@ -1,3 +1,5 @@
+import { faBars, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -53,6 +55,16 @@ export default {
     '@nuxtjs/robots',
     '@nuxtjs/sitemap' // !!! sitemap must always be at the end !!!
   ],
+
+  chakra: {
+    icons: {
+      iconPack: 'fa',
+      iconSet: {
+        faBars,
+        faTimesCircle
+      }
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

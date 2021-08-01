@@ -4,6 +4,7 @@
       <CColorModeProvider>
         <CBox font-family="body" as="main">
           <CReset />
+          <NavBar />
           <Nuxt />
         </CBox>
       </CColorModeProvider>
@@ -24,7 +25,8 @@ export default {
     CThemeProvider,
     CColorModeProvider,
     CReset,
-    CBox
+    CBox,
+    NavBar: () => import('../components/xxxx-organisms/NavBar.vue')
   }
 }
 </script>
