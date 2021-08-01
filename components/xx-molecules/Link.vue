@@ -10,9 +10,10 @@
         as="div"
         :is-truncated="true"
         max-width="10rem"
+        :font-size="fontSize"
       />
-      <CBox mx="1" mb="1">
-        <Icon v-if="isExternal" name="external-link-alt" />
+      <CBox v-if="isExternal" mx="1" mb="1">
+        <Icon name="external-link-alt" />
       </CBox>
     </CFlex>
   </CLink>
@@ -56,6 +57,22 @@ export default {
       type: String,
       default: '',
       required: false
+    },
+    fontSize: {
+      type: String,
+      default: 'md',
+      validator: val => [
+        'xs',
+        'sm',
+        'md',
+        'lg',
+        'xl',
+        '2xl',
+        '3xl',
+        '4xl',
+        '5xl',
+        '6xl'
+      ].includes(val)
     }
   }
 }

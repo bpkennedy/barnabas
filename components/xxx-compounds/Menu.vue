@@ -1,8 +1,11 @@
 <template>
   <CFlex align="center" justify="center">
-    <Link href="https://www.google.com" label="Google" :is-external="true" />
-    <Link href="https://www.google.com" label="Google" :is-external="true" />
-    <Link href="https://www.google.com" label="Google" :is-external="true" />
+    <MenuBtn
+      v-for="topLink in topLinks"
+      :key="topLink.id"
+      :links="topLink.links"
+      :title="topLink.title"
+    />
   </CFlex>
 </template>
 
@@ -14,7 +17,112 @@ import {
 export default {
   components: {
     CFlex,
-    Link: () => import('../xx-molecules/Link.vue')
+    MenuBtn: () => import('../xx-molecules/MenuBtn.vue')
+  },
+  data () {
+    return {
+      topLinks: [{
+        id: 1,
+        title: 'I\'m New',
+        links: [{
+          id: 1,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }, {
+          id: 2,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }, {
+          id: 3,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }, {
+          id: 4,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }]
+      }, {
+        id: 2,
+        title: 'Get Involved',
+        links: [{
+          id: 1,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }, {
+          id: 2,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }, {
+          id: 3,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }]
+      }, {
+        id: 3,
+        title: 'Events',
+        links: [{
+          id: 1,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }, {
+          id: 2,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }, {
+          id: 3,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }]
+      }, {
+        id: 4,
+        title: 'Resources',
+        links: [{
+          id: 1,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }, {
+          id: 2,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }, {
+          id: 3,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }]
+      }, {
+        id: 5,
+        title: 'About',
+        links: [{
+          id: 1,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }, {
+          id: 2,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }, {
+          id: 3,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }]
+      }, {
+        id: 6,
+        title: 'Sundays',
+        links: [{
+          id: 1,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }, {
+          id: 2,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }, {
+          id: 3,
+          label: 'Google',
+          to: 'https://www.google.com'
+        }]
+      }]
+    }
   }
 }
 </script>
