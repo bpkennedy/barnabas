@@ -2,6 +2,7 @@
   <CButton
     :variant-color="variantColor"
     :variant="variant"
+    :z-index="zIndex"
   >
     <CBox
       v-if="leftIcon"
@@ -51,6 +52,10 @@ export default {
       default: null
     },
     rightIcon: {
+      type: String || null,
+      default: null
+    },
+    zIndex: {
       type: String || null,
       default: null
     }

@@ -1,11 +1,14 @@
 <template>
-  <c-menu v-slot="{ isOpen }">
-    <c-menu-button
+  <CMenu v-slot="{ isOpen }">
+    <CMenuButton
       :is-active="isOpen"
       variant="ghost"
       variant-color="default"
       right-icon="chevron-down"
-      :_hover="{ bg: 'blue.500', color: 'white' }"
+      :_hover="{
+        bg: 'var(--bnb-color-blue-100)',
+        color: 'var(--bnb-color-blackalpha-800)'
+      }"
       :_expanded="{ shadow: 'outline' }"
     >
       <Txt
@@ -15,11 +18,12 @@
         max-width="10rem"
         font-size="sm"
       />
-    </c-menu-button>
-    <c-menu-list>
-      <c-menu-item
+    </CMenuButton>
+    <CMenuList>
+      <CMenuItem
         v-for="link in links"
         :key="link.id"
+        :_hover="{ cursor: 'initial' }"
       >
         <Link
           :label="link.label"
@@ -27,9 +31,9 @@
           :to="link.to"
           :is-external="link.isExternal"
         />
-      </c-menu-item>
-    </c-menu-list>
-  </c-menu>
+      </CMenuItem>
+    </CMenuList>
+  </CMenu>
 </template>
 
 <script lang="js">
