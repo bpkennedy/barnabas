@@ -1,7 +1,12 @@
 <template>
   <CFlex p="4" align="center" justify="space-between">
     <Logo />
-    <MenuToggle />
+    <ShowDesktop>
+      <Menu />
+    </ShowDesktop>
+    <ShowMobile>
+      <MenuToggle />
+    </ShowMobile>
   </CFlex>
 </template>
 
@@ -14,7 +19,10 @@ export default {
   components: {
     CFlex,
     Logo: () => import('../x-atoms/Logo.vue'),
-    MenuToggle: () => import('../xxx-compounds/MenuToggle.vue')
+    Menu: () => import('../xxx-compounds/Menu.vue'),
+    MenuToggle: () => import('../xxx-compounds/MenuToggle.vue'),
+    ShowMobile: () => import('../x-atoms/ShowMobile.vue'),
+    ShowDesktop: () => import('../x-atoms/ShowDesktop.vue')
   }
 }
 </script>

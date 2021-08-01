@@ -1,4 +1,4 @@
-import { faBars, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faTimesCircle, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -57,11 +57,15 @@ export default {
   ],
 
   chakra: {
+    extendTheme: {
+      breakpoints: ['30em', '48em', '62em', '80em']
+    },
     icons: {
       iconPack: 'fa',
       iconSet: {
         faBars,
-        faTimesCircle
+        faTimesCircle,
+        faExternalLinkAlt
       }
     }
   },

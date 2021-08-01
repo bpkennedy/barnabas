@@ -4,6 +4,7 @@
     :as="as"
     :font-size="fontSize"
     :color="color"
+    :max-width="maxWidth"
   >
     {{ value }}
   </CText>
@@ -61,6 +62,10 @@ export default {
     color: {
       type: String,
       default: 'default'
+    },
+    maxWidth: {
+      type: String,
+      default: '100%'
     }
   }
 }
