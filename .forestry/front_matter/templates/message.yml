@@ -18,6 +18,12 @@ fields:
       format: markdown
   label: Description
   description: A description of this message
+- name: image
+  type: file
+  config:
+    maxSize: 2
+  label: Image
+  description: A featured image for your message.
 - name: publish
   type: datetime
   label: Publish
@@ -28,17 +34,6 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
-  default: now
-- name: created
-  type: datetime
-  description: The date this message was created
-  config:
-    required: true
-    date_format: 
-    time_format: 
-    display_utc: false
-  label: Created
-  hidden: true
   default: now
 - name: author
   type: select
@@ -56,3 +51,14 @@ fields:
       path: 
   label: Author
   description: The author's name.
+- name: created
+  type: datetime
+  description: The date this message was created
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Created
+  hidden: true
+  default: now
