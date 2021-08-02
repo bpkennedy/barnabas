@@ -7,3 +7,4 @@ description: Regular weekly update
 image: "/uploads/11459031-8d6f-45ce-acf7-41f1ea181ca6.jpeg"
 
 ---
+The example message content would go here.  This should be a fairly easy to use WYSIWYG editor for others to log into this interface and use.
