@@ -1,4 +1,58 @@
 ---
 label: Message
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  description: The title of this message
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+  description: A description of this message
+- name: publish
+  type: datetime
+  label: Publish
+  description: 'The publication date to make this message visible to readers. <strong>IMPORTANT:
+    This content is not visible until on/after its publication date.</strong>'
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+- name: created
+  type: datetime
+  description: The date this message was created
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Created
+  hidden: true
+  default: now
+- name: author
+  type: select
+  default: Mary Haggerty
+  config:
+    required: true
+    options:
+    - Mary Haggerty
+    - Leah Milton
+    - Marian Linck
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Author
+  description: The author's name.
