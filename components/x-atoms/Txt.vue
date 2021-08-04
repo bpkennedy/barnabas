@@ -6,7 +6,7 @@
     :color="color"
     :max-width="maxWidth"
   >
-    {{ value }}
+    <slot />
   </CText>
 </template>
 
@@ -20,10 +20,6 @@ export default {
     CText
   },
   props: {
-    value: {
-      type: String,
-      default: ''
-    },
     as: {
       type: String,
       default: 'p',

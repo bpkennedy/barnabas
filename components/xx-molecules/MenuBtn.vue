@@ -12,24 +12,24 @@
       :_expanded="{ shadow: 'outline' }"
     >
       <Txt
-        :value="title"
         as="div"
         :is-truncated="true"
         max-width="10rem"
         font-size="sm"
-      />
+      >
+        {{ title }}
+      </Txt>
     </CMenuButton>
     <CMenuList>
       <CMenuItem
         v-for="link in links"
-        :key="link.id"
+        :key="link.title"
         :_hover="{ cursor: 'initial' }"
       >
         <Link
-          :label="link.label"
-          :href="link.href"
+          :title="link.title"
           :to="link.to"
-          :is-external="link.isExternal"
+          as="nuxt-link"
         />
       </CMenuItem>
     </CMenuList>
@@ -39,20 +39,19 @@
 <script lang="js">
 import {
   CMenu,
+  CMenuButton,
   CMenuList,
-  CMenuItem,
-  CMenuButton
+  CMenuItem
 } from '@chakra-ui/vue'
 
 export default {
   components: {
     CMenu,
+    CMenuButton,
     CMenuList,
     CMenuItem,
-    CMenuButton,
     Txt: () => import('../x-atoms/Txt.vue'),
     Link: () => import('../xx-molecules/Link.vue')
-
   },
   props: {
     links: {

@@ -3,7 +3,7 @@
     <Btn
       v-if="menuToggled"
       variant="ghost"
-      label="Close"
+      title="Close"
       left-icon="times-circle"
       z-index="tooltip"
       @click.native="toggle"
@@ -11,7 +11,7 @@
     <Btn
       v-else
       variant="ghost"
-      label="Menu"
+      title="Menu"
       left-icon="bars"
       z-index="tooltip"
       @click.native="toggle"

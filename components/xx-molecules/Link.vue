@@ -6,12 +6,13 @@
   >
     <CFlex align="center" justify="center">
       <Txt
-        :value="label"
         as="div"
         :is-truncated="true"
         max-width="10rem"
         :font-size="fontSize"
-      />
+      >
+        {{ title }}
+      </Txt>
       <CBox v-if="isExternal" mx="1" mb="1">
         <Icon name="external-link-alt" />
       </CBox>
@@ -35,7 +36,7 @@ export default {
     Icon: () => import('../x-atoms/Icon.vue')
   },
   props: {
-    label: {
+    title: {
       type: String,
       required: true
     },
@@ -54,7 +55,7 @@ export default {
       validator: val => ['a', 'router-link', 'nuxt-link'].includes(val)
     },
     to: {
-      type: String,
+      type: [String, Object],
       default: '',
       required: false
     },

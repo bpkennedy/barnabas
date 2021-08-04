@@ -1,8 +1,8 @@
 <template>
   <CAccordion :allow-multiple="true">
     <CAccordionItem
-      v-for="topLink in topLinks"
-      :key="topLink.id"
+      v-for="item in navigationItems"
+      :key="item.name"
       :is-open="false"
     >
       <CAccordionHeader
@@ -11,7 +11,9 @@
         :_expanded="{ shadow: 'none' }"
         :_focus="{ shadow: 'none' }"
       >
-        <Txt :value="topLink.title" />
+        <Txt>
+          {{ item.display }}
+        </Txt>
         <CAccordionIcon />
       </CAccordionHeader>
       <CAccordionPanel
@@ -21,12 +23,12 @@
       >
         <CStack align="flex-start">
           <CBox
-            v-for="link in topLink.links"
-            :key="link.id"
+            v-for="link in item.links"
+            :key="link.title"
             padding="var(--bnb-spacing-2xs)"
           >
             <Link
-              :label="link.label"
+              :title="link.title"
               :to="link.to"
             />
           </CBox>
@@ -61,7 +63,7 @@ export default {
     Txt: () => import('../x-atoms/Txt.vue')
   },
   computed: {
-    ...mapState(['topLinks'])
+    ...mapState(['navigationItems'])
   }
 }
 </script>

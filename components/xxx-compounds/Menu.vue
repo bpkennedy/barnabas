@@ -1,10 +1,10 @@
 <template>
   <CFlex align="center" justify="center">
     <MenuBtn
-      v-for="topLink in topLinks"
-      :key="topLink.id"
-      :links="topLink.links"
-      :title="topLink.title"
+      v-for="item in navigationItems"
+      :key="item.name"
+      :links="item.links"
+      :title="item.display"
     />
   </CFlex>
 </template>
@@ -21,7 +21,7 @@ export default {
     MenuBtn: () => import('../xx-molecules/MenuBtn.vue')
   },
   computed: {
-    ...mapState(['topLinks'])
+    ...mapState(['navigationItems'])
   }
 }
 </script>

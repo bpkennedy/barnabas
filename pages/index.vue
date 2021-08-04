@@ -9,8 +9,14 @@
       justify-content="center"
     >
       <CHeading text-align="center" mb="4">
-        ⚡️ <Txt :value="title" as="h1" font-size="4xl" />
+        ⚡️
+        <Txt as="h1" font-size="4xl">
+          {{ title }}
+        </Txt>
       </CHeading>
+      <div @click="selectItem">
+        test this
+      </div>
       <CFlex justify="center" direction="column" align="center">
         <CBox mb="3">
           <CIconButton
@@ -106,6 +112,7 @@ import {
   CFlex,
   CHeading
 } from '@chakra-ui/vue'
+import { SELECTED_ITEM_ACTION } from '~/store'
 
 export default {
   name: 'App',
@@ -175,6 +182,13 @@ export default {
         status: 'success',
         duration: 10000,
         isClosable: true
+      })
+    },
+    selectItem () {
+      this.$store.dispatch(SELECTED_ITEM_ACTION, {
+        item: 'Welcome',
+        itemType: 'messages',
+        router: this.$nuxt.$router
       })
     }
   }

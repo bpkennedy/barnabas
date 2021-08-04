@@ -10,7 +10,9 @@
     >
       <Icon :name="leftIcon" />
     </CBox>
-    <Txt :value="label" as="div" />
+    <Txt as="div">
+      {{ title }}
+    </Txt>
     <CBox
       v-if="rightIcon"
       ml="1"
@@ -34,7 +36,7 @@ export default {
     Txt: () => import('../x-atoms/Txt.vue')
   },
   props: {
-    label: {
+    title: {
       type: String,
       required: true
     },
@@ -48,15 +50,15 @@ export default {
       default: 'primary'
     },
     leftIcon: {
-      type: String || null,
+      type: [String, null],
       default: null
     },
     rightIcon: {
-      type: String || null,
+      type: [String, null],
       default: null
     },
     zIndex: {
-      type: String || null,
+      type: [String, null],
       default: null
     }
   }
