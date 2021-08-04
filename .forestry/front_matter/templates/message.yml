@@ -63,5 +63,3 @@ fields:
   label: Created
   hidden: true
   default: now
-pages:
-- "./content/messages/weekly-update-8-9-2021.md"
