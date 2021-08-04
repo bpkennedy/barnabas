@@ -14,7 +14,7 @@
       <Txt
         as="div"
         :is-truncated="true"
-        max-width="10rem"
+        max-width="var(--bnb-sizing-xl)"
         font-size="sm"
       >
         {{ title }}

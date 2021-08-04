@@ -1,11 +1,11 @@
 <template>
-  <CFlex p="4" align="center" justify="space-between">
+  <CFlex p="var(--bnb-spacing-md)" align="center" justify="space-between">
     <Logo />
     <ShowDesktop>
       <Menu />
     </ShowDesktop>
     <ShowMobile>
-      <MenuToggle class="tg" />
+      <MenuToggle />
       <CBox
         v-if="menuToggled"
         position="absolute"
@@ -13,10 +13,9 @@
         left="0"
         right="0"
         bottom="0"
-        pt="16"
-        background="white"
+        pt="var(--bnb-spacing-3xl)"
+        background="var(--bnb-color-white)"
         z-index="toast"
-        class="cb"
       >
         <MenuAccordion />
       </CBox>

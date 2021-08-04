@@ -8,12 +8,16 @@
       <Txt
         as="div"
         :is-truncated="true"
-        max-width="10rem"
+        max-width="var(--bnb-sizing-xl)"
         :font-size="fontSize"
       >
         {{ title }}
       </Txt>
-      <CBox v-if="isExternal" mx="1" mb="1">
+      <CBox
+        v-if="isExternal"
+        mx="var(--bnb-spacing-3xs)"
+        mb="var(--bnb-spacing-3xs)"
+      >
         <Icon name="external-link-alt" />
       </CBox>
     </CFlex>

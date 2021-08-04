@@ -6,7 +6,7 @@
   >
     <CBox
       v-if="leftIcon"
-      mr="1"
+      mr="var(--bnb-spacing-3xs)"
     >
       <Icon :name="leftIcon" />
     </CBox>
@@ -15,7 +15,7 @@
     </Txt>
     <CBox
       v-if="rightIcon"
-      ml="1"
+      ml="var(--bnb-spacing-3xs)"
     >
       <Icon :name="rightIcon" />
     </CBox>
