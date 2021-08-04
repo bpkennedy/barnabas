@@ -1,13 +1,6 @@
 <template>
   <div class="container">
-    <CBox
-      v-bind="mainStyles[colorMode]"
-      d="flex"
-      w="100vw"
-      h="100vh"
-      flex-dir="column"
-      justify-content="center"
-    >
+    <CBox v-bind="mainStyles[colorMode]">
       <CHeading text-align="center" mb="4">
         ⚡️
         <Txt as="h1" font-size="4xl">

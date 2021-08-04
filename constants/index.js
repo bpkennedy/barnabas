@@ -4,17 +4,17 @@ export const RESOURCES_LIST_NAME = 'resources'
 export const ACTIVITIES_LIST_NAME = 'activities'
 
 // Top level nav item names
-const HOME = 'home'
-const SUNDAYS = 'sundays'
-const MINISTRIES = 'ministries'
-const GET_INVOLVED = 'getinvolved'
-const EVENTS = 'events'
-const RESOURCES = 'resources'
-const ABOUT = 'about'
+export const HOME = 'home'
+export const SUNDAYS = 'sundays'
+export const MINISTRIES = 'ministries'
+export const GET_INVOLVED = 'getinvolved'
+export const EVENTS = 'events'
+export const RESOURCES = 'resources'
+export const ABOUT = 'about'
 
 // Sublevel nav link names
-const VISION = 'vision'
-const NEWS = 'news'
+export const VISION = 'vision'
+export const NEWS = 'news'
 const SERVICES = 'services'
 const WORSHIP = 'worship'
 const STUDY_GROUP = 'studygroup'
@@ -32,36 +32,36 @@ const CONTACT = 'contact'
 const LOCATION = 'location'
 
 const HOME_LINKS = [
-  { title: 'Our Vision and Mission Statements', to: { path: '/', hash: `#${VISION}` } },
+  { title: 'Our Vision and Mission Statements', to: { path: `/${VISION}` } },
   { title: 'News', to: { path: `/${NEWS}` } }
 ]
 const SUNDAYS_LINKS = [
-  { title: 'Services', to: { path: `/${SUNDAYS}`, hash: `#${SERVICES}` } },
-  { title: 'Worship', to: { path: `/${SUNDAYS}`, hash: `#${WORSHIP}` } }
+  { title: 'Services', to: { path: `/${SUNDAYS}/${SERVICES}` } },
+  { title: 'Worship', to: { path: `/${SUNDAYS}/${WORSHIP}` } }
 ]
 const MINISTRIES_LINKS = [
-  { title: 'Adult Study Group', to: { path: `/${MINISTRIES}`, hash: `#${STUDY_GROUP}` } },
-  { title: 'TEAM Food Drive', to: { path: `/${MINISTRIES}`, hash: `#${TEAM}` } },
-  { title: 'Barundi Clean Water', to: { path: `/${MINISTRIES}`, hash: `#${BARUNDI}` } }
+  { title: 'Adult Study Group', to: { path: `/${MINISTRIES}/${STUDY_GROUP}` } },
+  { title: 'TEAM Food Drive', to: { path: `/${MINISTRIES}/${TEAM}` } },
+  { title: 'Barundi Clean Water', to: { path: `/${MINISTRIES}/${BARUNDI}` } }
 ]
 const GET_INVOLVED_LINKS = [
-  { title: 'Serving Schedule', to: { path: `/${GET_INVOLVED}`, hash: `#${SERVING}` } },
-  { title: 'Community Garden', to: { path: `/${GET_INVOLVED}`, hash: `#${GARDEN}` } },
-  { title: 'Adult Choir', to: { path: `/${GET_INVOLVED}`, hash: `#${CHOIR}` } }
+  { title: 'Serving Schedule', to: { path: `/${GET_INVOLVED}/${SERVING}` } },
+  { title: 'Community Garden', to: { path: `/${GET_INVOLVED}/${GARDEN}` } },
+  { title: 'Adult Choir', to: { path: `/${GET_INVOLVED}/${CHOIR}` } }
 ]
 const EVENTS_LINKS = [
   { title: 'Calendar of Activities', to: { path: `/${EVENTS}` } }
 ]
 const RESOURCES_LINKS = [
-  { title: 'Annual Reports', to: { path: `/${RESOURCES}`, hash: `#${REPORTS}` } },
-  { title: 'Archived Sermons', to: { path: `/${RESOURCES}`, hash: `#${ARCHIVES}` } },
-  { title: 'Past Salter Newsletters', to: { path: `/${RESOURCES}`, hash: `#${SALTER}` } },
-  { title: 'Useful Links', to: { path: `/${RESOURCES}`, hash: `#${LINKS}` } }
+  { title: 'Annual Reports', to: { path: `/${RESOURCES}/${REPORTS}` } },
+  { title: 'Archived Sermons', to: { path: `/${RESOURCES}/${ARCHIVES}` } },
+  { title: 'Past Salter Newsletters', to: { path: `/${RESOURCES}/${SALTER}` } },
+  { title: 'Useful Links', to: { path: `/${RESOURCES}/${LINKS}` } }
 ]
 const ABOUT_LINKS = [
-  { title: 'History', to: { path: `/${ABOUT}`, hash: `#${HISTORY}` } },
-  { title: 'Contact Us', to: { path: `/${ABOUT}`, hash: `#${CONTACT}` } },
-  { title: 'Location', to: { path: `/${ABOUT}`, hash: `#${LOCATION}` } }
+  { title: 'History', to: { path: `/${ABOUT}/${HISTORY}` } },
+  { title: 'Contact Us', to: { path: `/${ABOUT}/${CONTACT}` } },
+  { title: 'Location', to: { path: `/${ABOUT}/${LOCATION}` } }
 ]
 
 export const HOME_VIEW = { name: HOME, display: 'Home', to: '/', links: HOME_LINKS }

@@ -2,7 +2,14 @@
   <div class="container">
     <CThemeProvider>
       <CColorModeProvider>
-        <CBox font-family="body" as="main">
+        <CBox
+          font-family="body"
+          as="main"
+          d="flex"
+          w="100vw"
+          h="100vh"
+          flex-dir="column"
+        >
           <CReset />
           <NavBar />
           <Nuxt />
