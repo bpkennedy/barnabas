@@ -3,7 +3,50 @@ new_page_extension: md
 auto_deploy: false
 admin_path: ''
 webhook_url: 
-sections: 
+sections:
+- type: directory
+  path: content/sundays
+  label: sundays
+  create: documents
+  match: "**/*"
+  templates:
+  - contentpage
+- type: directory
+  path: content/resources
+  label: resources
+  create: documents
+  match: "**/*"
+  templates:
+  - contentpage
+- type: directory
+  path: content/news
+  label: news
+  create: documents
+  match: "**/*"
+  templates:
+  - contentpage
+- type: directory
+  path: content/ministries
+  label: ministries
+  create: documents
+  match: "**/*"
+  templates:
+  - contentpage
+- type: directory
+  path: content/getinvolved
+  label: getinvolved
+  create: documents
+  match: "**/*"
+  templates:
+  - contentpage
+- type: directory
+  path: content/about
+  label: about
+  create: documents
+  match: "**/*"
+  templates:
+  - contentpage
+  - contentpage
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
