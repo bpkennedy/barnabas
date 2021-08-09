@@ -46,3 +46,9 @@ fields:
     required: true
   label: title
   description: The title of the content
+- name: image
+  type: file
+  config:
+    maxSize: 10
+  label: image
+  description: Upload a page image
