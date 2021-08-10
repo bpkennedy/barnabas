@@ -6,5 +6,3 @@ title: Worship
 
 ---
 Testing some stuff here!
-
-![](/uploads/11459031-8d6f-45ce-acf7-41f1ea181ca6.jpeg)
