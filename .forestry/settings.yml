@@ -47,8 +47,8 @@ sections:
   templates:
   - contentpage
   - contentpage
-upload_dir: https://stbarnabas-stl.s3.us-east-2.amazonaws.com
-public_path: https://stbarnabas-stl.s3.us-east-2.amazonaws.com
+upload_dir: uploads
+public_path: uploads
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
