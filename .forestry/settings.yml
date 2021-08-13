@@ -4,11 +4,25 @@ auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
 sections:
-- type: document
-  path: README-CMS.md
-  label: Help
+- type: heading
+  label: CONTENT
+- type: directory
+  path: content/pages
+  label: Pages
+  create: documents
   match: "**/*"
-  read_only: true
+  templates:
+  - contentpage
+- type: directory
+  path: content/posts
+  label: Posts
+  create: documents
+  match: "**/*"
+- type: directory
+  path: content/services
+  label: Services
+  create: documents
+  match: "**/*"
 - type: directory
   path: content/sundays
   label: sundays
@@ -52,6 +66,17 @@ sections:
   templates:
   - contentpage
   - contentpage
+- type: heading
+  label: DOCUMENTATION
+- type: document
+  path: README-CMS.md
+  label: Help
+  read_only: true
+- type: document
+  path: changelog.md
+  label: Changelog
+  match: "**/*"
+  read_only: true
 upload_dir: uploads
 public_path: uploads
 front_matter_path: ''
