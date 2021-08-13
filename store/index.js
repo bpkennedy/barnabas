@@ -1,16 +1,13 @@
 import Vue from 'vue'
 import {
   LIST_NAMES,
-  ACTIVITIES_LIST_NAME,
+  POSTS_LIST_NAME,
+  SERVICES_LIST_NAME,
   EVENTS_LIST_NAME,
-  MESSAGES_LIST_NAME,
-  RESOURCES_LIST_NAME,
   HOME_VIEW,
   TOP_NAVIGATION,
   VIEW_NAMES,
-  GET_INVOLVED_VIEW,
   EVENTS_VIEW,
-  RESOURCES_VIEW,
   ABOUT_VIEW,
   SUNDAYS_VIEW
 } from '~/constants'
@@ -26,7 +23,7 @@ const SET_SELECTED_ITEM_MUTATION = 'SET_SELECTED_ITEM_MUTATION'
 const SET_LIST_ITEMS_MUTATION = 'SET_LIST_ITEMS_MUTATION'
 
 export const state = () => ({
-  [MESSAGES_LIST_NAME]: [],
+  [POSTS_LIST_NAME]: [],
   loading: false,
   menuToggled: false,
   selectedItem: {},
@@ -51,20 +48,20 @@ export const actions = {
     if (!VIEW_NAMES.includes(viewName)) {
       throw new Error('Attempted to load an unknown view: ' + viewName)
     }
-    if (viewName === HOME_VIEW.name) {
-      // TODO query nuxtcontent for stuff for homepage
-    }
-    if (viewName === GET_INVOLVED_VIEW.name) {
-      const activities = state[ACTIVITIES_LIST_NAME].length ? state[ACTIVITIES_LIST_NAME] : await listContentQuery(ACTIVITIES_LIST_NAME, nuxtContent)
-      commit(SET_LIST_ITEMS_MUTATION, { listName: ACTIVITIES_LIST_NAME, listContent: activities })
+    if (viewName === POSTS_LIST_NAME.name) {
+      const posts = state[POSTS_LIST_NAME].length ? state[POSTS_LIST_NAME] : await listContentQuery(POSTS_LIST_NAME, nuxtContent)
+      commit(SET_LIST_ITEMS_MUTATION, { listName: POSTS_LIST_NAME, listContent: posts })
     }
     if (viewName === EVENTS_VIEW.name) {
       const events = state[EVENTS_LIST_NAME].length ? state[EVENTS_LIST_NAME] : await listContentQuery(EVENTS_LIST_NAME, nuxtContent)
       commit(SET_LIST_ITEMS_MUTATION, { listName: EVENTS_LIST_NAME, listContent: events })
     }
-    if (viewName === RESOURCES_VIEW.name) {
-      const resources = state[RESOURCES_LIST_NAME].length ? state[RESOURCES_LIST_NAME] : await listContentQuery(RESOURCES_LIST_NAME, nuxtContent)
-      commit(SET_LIST_ITEMS_MUTATION, { listName: RESOURCES_LIST_NAME, listContent: resources })
+    if (viewName === SERVICES_LIST_NAME.name) {
+      const services = state[SERVICES_LIST_NAME].length ? state[SERVICES_LIST_NAME] : await listContentQuery(SERVICES_LIST_NAME, nuxtContent)
+      commit(SET_LIST_ITEMS_MUTATION, { listName: SERVICES_LIST_NAME, listContent: services })
+    }
+    if (viewName === HOME_VIEW.name) {
+      // TODO query nuxtcontent for stuff for homepage
     }
     if (viewName === ABOUT_VIEW.name) {
       // TODO query nuxtcontent for stuff ONLY for About

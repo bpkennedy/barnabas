@@ -34,7 +34,7 @@ export default {
     async shortLoadSelectedItem () {
       if (!this.selectedItem.title) {
         this.$store.dispatch(DATA_IS_LOADING_ACTION)
-        this.loadedItem = await this.$content(`/${ABOUT}/${this.slug}`).fetch()
+        this.loadedItem = await this.$content(`/pages/${ABOUT}/${this.slug}`).fetch()
         this.$store.dispatch(DATA_DONE_LOADING_ACTION)
       } else {
         this.loadedItem = this.selectedItem

@@ -14,9 +14,10 @@
         <Txt>
           {{ item.display }}
         </Txt>
-        <CAccordionIcon />
+        <CAccordionIcon v-if="item.links.length > 0" />
       </CAccordionHeader>
       <CAccordionPanel
+        v-if="item.links.length > 0"
         padding="var(--bnb-spacing-md)"
         background="var(--bnb-color-blue-100)"
         color="var(--bnb-color-blackalpha-800)"

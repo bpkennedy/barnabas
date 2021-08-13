@@ -10,7 +10,10 @@
     >
       <Icon :name="leftIcon" />
     </CBox>
-    <Txt as="div">
+    <Txt
+      as="div"
+      :font-size="fontSize"
+    >
       {{ title }}
     </Txt>
     <CBox
@@ -48,6 +51,22 @@ export default {
     variantColor: {
       type: String,
       default: 'primary'
+    },
+    fontSize: {
+      type: String,
+      default: 'md',
+      validator: val => [
+        'xs',
+        'sm',
+        'md',
+        'lg',
+        'xl',
+        '2xl',
+        '3xl',
+        '4xl',
+        '5xl',
+        '6xl'
+      ].includes(val)
     },
     leftIcon: {
       type: [String, null],

@@ -4,7 +4,7 @@
       :is-active="isOpen"
       variant="ghost"
       variant-color="default"
-      right-icon="chevron-down"
+      :right-icon="links.length ? 'chevron-down' : null"
       :_hover="{
         bg: 'var(--bnb-color-blue-100)',
         color: 'var(--bnb-color-blackalpha-800)'
