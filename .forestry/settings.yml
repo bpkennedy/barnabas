@@ -24,6 +24,11 @@ sections:
   create: documents
   match: "**/*"
 - type: directory
+  path: content/events
+  label: Events
+  create: all
+  match: "**/*"
+- type: directory
   path: content/sundays
   label: sundays
   create: documents
