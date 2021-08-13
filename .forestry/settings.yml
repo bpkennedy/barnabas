@@ -28,49 +28,6 @@ sections:
   label: Events
   create: all
   match: "**/*"
-- type: directory
-  path: content/sundays
-  label: sundays
-  create: documents
-  match: "**/*"
-  templates:
-  - contentpage
-- type: directory
-  path: content/resources
-  label: resources
-  create: documents
-  match: "**/*"
-  templates:
-  - contentpage
-- type: directory
-  path: content/news
-  label: news
-  create: documents
-  match: "**/*"
-  templates:
-  - contentpage
-- type: directory
-  path: content/ministries
-  label: ministries
-  create: documents
-  match: "**/*"
-  templates:
-  - contentpage
-- type: directory
-  path: content/getinvolved
-  label: getinvolved
-  create: documents
-  match: "**/*"
-  templates:
-  - contentpage
-- type: directory
-  path: content/about
-  label: about
-  create: documents
-  match: "**/*"
-  templates:
-  - contentpage
-  - contentpage
 - type: heading
   label: DOCUMENTATION
 - type: document
