@@ -4,6 +4,11 @@ auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
 sections:
+- type: document
+  path: README-CMS.md
+  label: Help
+  match: "**/*"
+  read_only: true
 - type: directory
   path: content/sundays
   label: sundays
