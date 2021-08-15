@@ -9,6 +9,13 @@ sections:
 - type: document
   path: content/data/asset.json
   label: Assets
+- type: directory
+  path: content/persons
+  label: Persons
+  create: documents
+  match: "**/*"
+  templates:
+  - person
 - type: document
   path: content/data/role.json
   label: Roles
