@@ -7,8 +7,12 @@ sections:
 - type: heading
   label: CONTENT
 - type: document
-  path: content/data/test.json
-  label: test
+  path: content/data/asset.json
+  label: Assets
+  match: "**/*"
+- type: document
+  path: content/data/role.json
+  label: Roles
 - type: directory
   path: content/pages
   label: Pages
