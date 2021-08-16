@@ -20,14 +20,7 @@ fields:
     required: false
   label: Last Name
 - name: role
-  type: select
-  default: []
-  config:
-    required: false
-    options: []
-    source:
-      type: pages
-      section: roles
-      file: 
-      path: 
+  type: include
+  config: {}
+  template: roletemplate
   label: Role
