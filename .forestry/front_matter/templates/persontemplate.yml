@@ -1,5 +1,5 @@
 ---
-label: PersonTemplate
+label: PersonModel
 hide_body: true
 fields:
 - name: last_name
@@ -12,3 +12,8 @@ fields:
   config: {}
   template: roletemplate
   label: Role
+- name: user
+  type: include
+  config: {}
+  template: _user
+  label: User
