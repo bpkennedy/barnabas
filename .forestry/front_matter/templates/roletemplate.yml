@@ -1,4 +1,30 @@
 ---
 label: RoleTemplate
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: select
+  default: ''
+  config:
+    required: true
+    options:
+    - Administrator
+    - The Reverend
+    - Director of Music
+    - Secretary
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Title
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+  description: What does this role do?
