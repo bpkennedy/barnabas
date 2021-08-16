@@ -1,4 +1,20 @@
 ---
 label: _user
 hide_body: true
-fields: []
+fields:
+- name: user
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Mary Haggerty
+    - Leah Milton
+    - Marian Linck
+    - Matt Milton
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: User
