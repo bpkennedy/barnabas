@@ -6,9 +6,6 @@ webhook_url:
 sections:
 - type: heading
   label: CONTENT
-- type: document
-  path: content/data/asset.json
-  label: Assets
 - type: directory
   path: content/persons
   label: Persons
@@ -16,11 +13,6 @@ sections:
   match: "**/*"
   templates:
   - persontemplate
-- type: directory
-  path: content/data/roles
-  label: Roles
-  create: documents
-  match: "**/*"
 - type: directory
   path: content/pages
   label: Pages
