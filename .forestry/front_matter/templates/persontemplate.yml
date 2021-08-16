@@ -12,3 +12,5 @@ fields:
   config: {}
   template: _user
   label: User
+pages:
+- content/persons/mary.md
