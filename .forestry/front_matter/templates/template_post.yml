@@ -1,4 +1,45 @@
 ---
 label: template_post
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: _byline
+  type: text
+  config:
+    required: false
+  label: " Byline"
+- name: image
+  type: file
+  config:
+    maxSize: 4
+  label: Image
+- name: author
+  type: include
+  config: {}
+  template: persontemplate
+  label: Author
+- name: created
+  type: datetime
+  label: Created
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+  hidden: true
+- name: publish_date
+  type: datetime
+  label: Publish Date
+  description: The content becomes publicly viewable on this date
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
