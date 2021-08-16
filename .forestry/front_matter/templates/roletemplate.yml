@@ -12,6 +12,7 @@ fields:
     - The Reverend
     - Director of Music
     - Secretary
+    - Contributor
     source:
       type: simple
       section: 
