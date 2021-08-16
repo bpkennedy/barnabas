@@ -14,8 +14,6 @@ sections:
   label: Persons
   create: documents
   match: "**/*"
-  templates:
-  - persontemplate
 - type: directory
   path: content/data/roles
   label: Roles
