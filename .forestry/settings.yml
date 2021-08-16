@@ -19,7 +19,7 @@ sections:
   create: all
   match: "**/*"
   templates:
-  - contentpage
+  - test
 - type: directory
   path: content/posts
   label: Posts
