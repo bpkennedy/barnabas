@@ -18,13 +18,3 @@ fields:
       file: 
       path: 
   label: Title
-- name: description
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Description
-  description: What does this role do?
