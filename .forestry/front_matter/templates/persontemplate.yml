@@ -2,11 +2,6 @@
 label: PersonModel
 hide_body: true
 fields:
-- name: last_name
-  type: text
-  config:
-    required: false
-  label: Last Name
 - name: role
   type: include
   config: {}
@@ -17,8 +12,3 @@ fields:
   config: {}
   template: _user
   label: User
-- name: test
-  type: include
-  config: {}
-  template: _user
-  label: Test
