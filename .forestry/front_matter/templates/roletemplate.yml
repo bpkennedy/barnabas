@@ -1,5 +1,5 @@
 ---
-label: _role
+label: __role
 hide_body: true
 fields:
 - name: role
