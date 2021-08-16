@@ -1,9 +1,0 @@
----
-label: Test
-hide_body: false
-fields:
-- name: fruit
-  type: text
-  config:
-    required: false
-  label: Fruit
