@@ -18,3 +18,8 @@ fields:
       file: 
       path: 
   label: User
+- name: first_name
+  type: text
+  config:
+    required: false
+  label: First Name
