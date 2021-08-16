@@ -21,6 +21,13 @@ sections:
   path: content/data/role.yml
   label: RolesYML
 - type: directory
+  path: content/data/roles.yml
+  label: RoleYml2
+  create: documents
+  match: "**/*"
+  templates:
+  - persontemplate
+- type: directory
   path: content/pages
   label: Pages
   create: all
