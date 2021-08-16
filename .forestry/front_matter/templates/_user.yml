@@ -1,5 +1,5 @@
 ---
-label: __user
+label: model_user
 hide_body: true
 fields:
 - name: first_name
