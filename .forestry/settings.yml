@@ -17,6 +17,10 @@ sections:
 - type: document
   path: content/data/role.json
   label: Roles
+- type: document
+  path: content/data/role.yml
+  label: RolesYML
+  match: "**/*"
 - type: directory
   path: content/pages
   label: Pages
