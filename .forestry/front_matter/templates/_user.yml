@@ -23,3 +23,8 @@ fields:
   config:
     required: false
   label: First Name
+- name: last_name
+  type: text
+  config:
+    required: false
+  label: Last Name
