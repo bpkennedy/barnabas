@@ -14,19 +14,6 @@ sections:
   label: Persons
   create: documents
   match: "**/*"
-- type: document
-  path: content/data/role.json
-  label: Roles
-- type: document
-  path: content/data/role.yml
-  label: RolesYML
-- type: directory
-  path: content/data/roles.yml
-  label: RoleYml2
-  create: documents
-  match: "**/*"
-  templates:
-  - persontemplate
 - type: directory
   path: content/pages
   label: Pages
