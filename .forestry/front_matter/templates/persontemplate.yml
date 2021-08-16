@@ -17,3 +17,8 @@ fields:
   config: {}
   template: _user
   label: User
+- name: test
+  type: include
+  config: {}
+  template: _user
+  label: Test
