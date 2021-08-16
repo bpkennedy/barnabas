@@ -12,3 +12,15 @@ fields:
   config:
     required: true
   label: Last Name
+- name: role
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: documents
+      section: rolesyml
+      file: content/data/role.yml
+      path: Roles
+  label: Role
