@@ -1,0 +1,15 @@
+---
+Roles:
+  Admin:
+    title: "John Doe"
+    description: "Website Administrator"
+  TheReverend:
+    title: "The Reverend"
+    description: "The Priest in Charge over the congregation"
+  Secretary:
+    title: "Secretary"
+    description: "The administrative assistant and secretary"
+  DirectorOfMusic:
+    title: "Director of Music"
+    description: "Worship music and choir director"
+---
