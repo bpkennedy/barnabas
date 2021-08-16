@@ -2,7 +2,7 @@
 label: _role
 hide_body: true
 fields:
-- name: title
+- name: role
   type: select
   default: ''
   config:
@@ -17,4 +17,4 @@ fields:
       section: 
       file: 
       path: 
-  label: Title
+  label: Role
