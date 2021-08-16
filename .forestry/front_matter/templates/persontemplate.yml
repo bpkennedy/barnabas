@@ -2,18 +2,6 @@
 label: PersonTemplate
 hide_body: true
 fields:
-- name: first_name
-  type: select
-  default: []
-  config:
-    required: false
-    options: []
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: First Name
 - name: last_name
   type: text
   config:
