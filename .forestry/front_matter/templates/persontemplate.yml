@@ -13,5 +13,4 @@ fields:
   template: _user
   label: User
 pages:
-- content/persons/mary-1.md
 - content/persons/mary.md
