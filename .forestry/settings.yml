@@ -25,6 +25,8 @@ sections:
   label: Posts
   create: documents
   match: "**/*"
+  templates:
+  - template_post
 - type: directory
   path: content/services
   label: Services
