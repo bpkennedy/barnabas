@@ -1,5 +1,5 @@
 ---
-label: PersonModel
+label: person_template
 hide_body: true
 fields:
 - name: role
