@@ -14,8 +14,6 @@ sections:
   label: Persons
   create: documents
   match: "**/*"
-  templates:
-  - person
 - type: document
   path: content/data/role.json
   label: Roles
